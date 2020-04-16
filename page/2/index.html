@@ -290,6 +290,215 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://beyondhxl.com/2020/04/10/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E4%BA%AB%E5%85%83%E6%A8%A1%E5%BC%8F/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="beyondhxl">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Beyond">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2020/04/10/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E4%BA%AB%E5%85%83%E6%A8%A1%E5%BC%8F/" itemprop="url">设计模式-享元模式</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-04-10T00:34:56Z">
+                2020-04-10
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/" itemprop="url" rel="index">
+                    <span itemprop="name">数据结构与算法</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2020/04/10/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E4%BA%AB%E5%85%83%E6%A8%A1%E5%BC%8F/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2020/04/10/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E4%BA%AB%E5%85%83%E6%A8%A1%E5%BC%8F/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2020/04/10/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E4%BA%AB%E5%85%83%E6%A8%A1%E5%BC%8F/" class="leancloud_visitors" data-flag-title="设计模式-享元模式">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">热度&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+				 <span>℃</span>
+             </span>
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  387
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  1
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h1><p>　　享元模式(Flyweight Pattern)：运用共享技术有效地支持大量细粒度对象的复用。系统只使用少量的对象，而这些对象都很相似，状态变化很小，可以实现对象的多次复用。由于享元模式要求能够共享的对象必须是细粒度对象，因此它又称为轻量级模式，它是一种对象结构型模式。</p>
+<h1 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a>代码实现</h1><p>基本对象</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 享元对象</span></span><br><span class="line"><span class="keyword">type</span> ObjFlyweight <span class="keyword">struct</span> &#123;</span><br><span class="line">	data <span class="keyword">string</span> <span class="comment">// 数据</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 构造</span></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">NewObjFlyweight</span><span class="params">(objname <span class="keyword">string</span>)</span> *<span class="title">ObjFlyweight</span></span> &#123;</span><br><span class="line">	data := fmt.Sprintf(<span class="string">"data %s"</span>, objname)</span><br><span class="line">	<span class="keyword">return</span> &amp;ObjFlyweight&#123;</span><br><span class="line">		data: data,</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="params">(o *ObjFlyweight)</span> <span class="title">Data</span><span class="params">()</span> <span class="title">string</span></span> &#123;</span><br><span class="line">	<span class="keyword">return</span> o.data</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>对象管理器(对象工厂)</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="params">(f *ObjFlyweightFactory)</span> <span class="title">Get</span><span class="params">(objname <span class="keyword">string</span>)</span> *<span class="title">ObjFlyweight</span></span> &#123;</span><br><span class="line">	obj := f.maps[objname]</span><br><span class="line">	<span class="comment">// 取对象，没有就New一个</span></span><br><span class="line">	<span class="keyword">if</span> obj == <span class="literal">nil</span> &#123; </span><br><span class="line">		obj = NewObjFlyweight(objname)</span><br><span class="line">		f.maps[objname] = obj</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> obj</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">type</span> ObjFlyweightFactory <span class="keyword">struct</span> &#123;</span><br><span class="line">	maps <span class="keyword">map</span>[<span class="keyword">string</span>]*ObjFlyweight</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> g_ObjFactory *ObjFlyweightFactory</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">GetObjFlyweightFactory</span><span class="params">()</span> *<span class="title">ObjFlyweightFactory</span></span> &#123;</span><br><span class="line">	<span class="keyword">if</span> g_ObjFactory == <span class="literal">nil</span> &#123;</span><br><span class="line">		g_ObjFactory = &amp;ObjFlyweightFactory&#123;</span><br><span class="line">			maps: <span class="built_in">make</span>(<span class="keyword">map</span>[<span class="keyword">string</span>]*ObjFlyweight),</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> g_ObjFactory</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>显示对象</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">type</span> ObjDisplay <span class="keyword">struct</span> &#123;</span><br><span class="line">	*ObjFlyweight</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">NewObjDisplay</span><span class="params">(objname <span class="keyword">string</span>)</span> *<span class="title">ObjDisplay</span></span> &#123;</span><br><span class="line">	obj := GetObjFlyweightFactory().Get(objname)</span><br><span class="line">	<span class="keyword">return</span> &amp;ObjDisplay&#123;</span><br><span class="line">		ObjFlyweight: obj,</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="params">(odisp *ObjDisplay)</span> <span class="title">Display</span><span class="params">()</span></span> &#123;</span><br><span class="line">	fmt.Printf(<span class="string">"Display: %s\n"</span>, odisp.Data())</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="测试用例"><a href="#测试用例" class="headerlink" title="测试用例"></a>测试用例</h1><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 样例输出测试</span></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">ExampleFlyweight</span><span class="params">()</span></span> &#123;</span><br><span class="line">	odisp := NewObjDisplay(<span class="string">"obj1"</span>)</span><br><span class="line">	odisp.Display()</span><br><span class="line">	<span class="comment">// Output:</span></span><br><span class="line">	<span class="comment">// Display: data obj1</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 结果显示如下：</span></span><br><span class="line">=== RUN   ExampleFlyweight</span><br><span class="line">--- PASS: ExampleFlyweight (<span class="number">0.00</span>s)</span><br><span class="line">PASS</span><br><span class="line"></span><br><span class="line">Process finished with exit code <span class="number">0</span></span><br><span class="line"></span><br><span class="line">------------------------------------------------------</span><br><span class="line"><span class="comment">// 对象测试</span></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">TestFlyweight</span><span class="params">(t *testing.T)</span></span> &#123;</span><br><span class="line">	odisp1 := NewObjDisplay(<span class="string">"obj1"</span>)</span><br><span class="line">	odisp2 := NewObjDisplay(<span class="string">"obj2"</span>)</span><br><span class="line">	odisp3 := NewObjDisplay(<span class="string">"obj1"</span>)</span><br><span class="line"></span><br><span class="line">	<span class="keyword">if</span> odisp1.ObjFlyweight != odisp2.ObjFlyweight &#123;</span><br><span class="line">		t.Fail()</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">if</span> odisp3.ObjFlyweight == odisp1.ObjFlyweight &#123;</span><br><span class="line">		t.Log(<span class="string">"Pass"</span>)</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 结果输出如下:</span></span><br><span class="line">=== RUN   TestFlyweight</span><br><span class="line">    TestFlyweight: flyweight_test.<span class="keyword">go</span>:<span class="number">24</span>: Pass</span><br><span class="line">--- FAIL: TestFlyweight (<span class="number">0.00</span>s)</span><br><span class="line">FAIL</span><br><span class="line"></span><br><span class="line">Process finished with exit code <span class="number">1</span></span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://beyondhxl.com/2020/04/09/%E6%89%93%E5%8D%B01%E5%88%B0%E6%9C%80%E5%A4%A7%E7%9A%84N%E4%BD%8D%E6%95%B0/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -718,7 +927,7 @@
               
                 <a href="/archives/%7C%7Carchive">
               
-                  <span class="site-state-item-count">12</span>
+                  <span class="site-state-item-count">13</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
