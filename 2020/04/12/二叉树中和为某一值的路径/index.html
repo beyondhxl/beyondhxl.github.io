@@ -7,7 +7,7 @@
 
 <html class="theme-next gemini use-motion" lang="zh-Hans">
 <head>
-  <meta charset="UTF-8"/>
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 <meta name="theme-color" content="#222">
@@ -111,12 +111,12 @@
 
 
 
-<meta name="description" content="题意题目描述 输入一颗二叉树和一个整数，打印出二叉树中结点值的和为输入整数的所有路径。路径定义为从树的根结点开始往下一直到叶结点所经过的结点形成一条路径 分析  由于路径是从根结点出发到叶结点，也就是说路径总是以根结点为起始点，因此我们首先需要遍历根结点。在树的前序、中序、后序三种遍历方式中，只有前序遍历是首先访问根结点的。     当用前序遍历的方式访问到某一结点时，我们把该结点添加到路径上，并">
+<meta name="description" content="题意题目描述 输入一颗二叉树和一个整数，打印出二叉树中结点值的和为输入整数的所有路径。路径定义为从树的根结点开始往下一直到叶结点所经过的结点形成一条路径 分析  由于路径是从根结点出发到叶结点，也就是说路径总是以根结点为起始点，因此我们首先需要遍历根结点。在树的前序、中序、后序三种遍历方式中，只有前序遍历是首先访问根结点的。  当用前序遍历的方式访问到某一结点时，我们把该结点添加到路径上，并累加该">
 <meta property="og:type" content="article">
 <meta property="og:title" content="二叉树中和为某一值的路径">
 <meta property="og:url" content="http://beyondhxl.com/2020/04/12/%E4%BA%8C%E5%8F%89%E6%A0%91%E4%B8%AD%E5%92%8C%E4%B8%BA%E6%9F%90%E4%B8%80%E5%80%BC%E7%9A%84%E8%B7%AF%E5%BE%84/index.html">
 <meta property="og:site_name" content="Beyond">
-<meta property="og:description" content="题意题目描述 输入一颗二叉树和一个整数，打印出二叉树中结点值的和为输入整数的所有路径。路径定义为从树的根结点开始往下一直到叶结点所经过的结点形成一条路径 分析  由于路径是从根结点出发到叶结点，也就是说路径总是以根结点为起始点，因此我们首先需要遍历根结点。在树的前序、中序、后序三种遍历方式中，只有前序遍历是首先访问根结点的。     当用前序遍历的方式访问到某一结点时，我们把该结点添加到路径上，并">
+<meta property="og:description" content="题意题目描述 输入一颗二叉树和一个整数，打印出二叉树中结点值的和为输入整数的所有路径。路径定义为从树的根结点开始往下一直到叶结点所经过的结点形成一条路径 分析  由于路径是从根结点出发到叶结点，也就是说路径总是以根结点为起始点，因此我们首先需要遍历根结点。在树的前序、中序、后序三种遍历方式中，只有前序遍历是首先访问根结点的。  当用前序遍历的方式访问到某一结点时，我们把该结点添加到路径上，并累加该">
 <meta property="article:published_time" content="2020-04-12T01:54:11.000Z">
 <meta property="article:modified_time" content="2020-04-12T05:11:54.257Z">
 <meta property="article:author" content="beyondhxl">
@@ -167,7 +167,7 @@
 
 
 
-<meta name="generator" content="Hexo 4.2.0"></head>
+<meta name="generator" content="Hexo 4.2.0"><!-- hexo-inject:begin --><!-- hexo-inject:end --></head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
 
@@ -176,7 +176,7 @@
     
   
 
-  <div class="container sidebar-position-left page-post-detail">
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -448,22 +448,14 @@
 <p>输入一颗二叉树和一个整数，打印出二叉树中结点值的和为输入整数的所有路径。路径定义为从树的根结点开始往下一直到叶结点所经过的结点形成一条路径</p>
 <h1 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h1><blockquote>
 <ul>
-<li>由于路径是从根结点出发到叶结点，也就是说路径总是以根结点为起始点，因此我们首先需要遍历根结点。在树的前序、中序、后序三种遍历方式中，只有前序遍历是首先访问根结点的。</li>
-</ul>
-</blockquote>
-<blockquote>
-<ul>
-<li>当用前序遍历的方式访问到某一结点时，我们把该结点添加到路径上，并累加该结点的值。如果该结点为叶结点并且路径中结点值的和刚好等于输入的整数，则当前的路径符合要求，我们把它打印出来。</li>
-</ul>
-</blockquote>
-<blockquote>
-<ul>
-<li>如果当前结点不是叶结点，则继续访问它的子结点。当前结点访问结束后，递归函数将自动回到它的父结点。</li>
-</ul>
-</blockquote>
-<blockquote>
-<ul>
-<li>因此我们在函数退出之前要在路径上删除当前结点并减去当前结点的值，以确保返回父结点时路径刚好是从根结点到父结点的路径。</li>
+<li><p>由于路径是从根结点出发到叶结点，也就是说路径总是以根结点为起始点，因此我们首先需要遍历根结点。在树的前序、中序、后序三种遍历方式中，只有前序遍历是首先访问根结点的。</p>
+</li>
+<li><p>当用前序遍历的方式访问到某一结点时，我们把该结点添加到路径上，并累加该结点的值。如果该结点为叶结点并且路径中结点值的和刚好等于输入的整数，则当前的路径符合要求，我们把它打印出来。</p>
+</li>
+<li><p>如果当前结点不是叶结点，则继续访问它的子结点。当前结点访问结束后，递归函数将自动回到它的父结点。</p>
+</li>
+<li><p>因此我们在函数退出之前要在路径上删除当前结点并减去当前结点的值，以确保返回父结点时路径刚好是从根结点到父结点的路径。</p>
+</li>
 </ul>
 </blockquote>
 <h2 id="参考Leetcode原题"><a href="#参考Leetcode原题" class="headerlink" title="参考Leetcode原题"></a>参考Leetcode原题</h2><p><a href="https://leetcode.com/problems/path-sum-ii/" target="_blank" rel="noopener">113. Path Sum II</a></p>
@@ -1066,6 +1058,28 @@
   
 
   
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+  
+
 
   
 

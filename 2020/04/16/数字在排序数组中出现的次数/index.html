@@ -7,7 +7,7 @@
 
 <html class="theme-next gemini use-motion" lang="zh-Hans">
 <head>
-  <meta charset="UTF-8"/>
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 <meta name="theme-color" content="#222">
@@ -167,7 +167,7 @@
 
 
 
-<meta name="generator" content="Hexo 4.2.0"></head>
+<meta name="generator" content="Hexo 4.2.0"><!-- hexo-inject:begin --><!-- hexo-inject:end --></head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
 
@@ -176,7 +176,7 @@
     
   
 
-  <div class="container sidebar-position-left page-post-detail">
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -470,27 +470,22 @@
 <h1 id="思路一"><a href="#思路一" class="headerlink" title="思路一"></a>思路一</h1><p>运用二分查找</p>
 <blockquote>
 <ul>
-<li>既然输入的数组是排序的，那么我们很自然地就能想到用二分查找算法。在题目给出的例子中，我们可以先用二分查找算法找到一个3。由于3可能出现多次，因此我们找到的3的左右两边可能都有3，于是我们在找到的3的左右两边顺序扫描，分别找出第一个3和最后一个3。</li>
-</ul>
-</blockquote>
-<blockquote>
-<ul>
-<li>因为要查找的数字在长度为n的数组中有可能出现O(n)次，所以顺序扫描的时间复杂度是O(n)。因此这种算法的效率和直接从头到尾顺序扫描整个数组统计3出现的次数的方法是一样的。</li>
+<li><p>既然输入的数组是排序的，那么我们很自然地就能想到用二分查找算法。在题目给出的例子中，我们可以先用二分查找算法找到一个3。由于3可能出现多次，因此我们找到的3的左右两边可能都有3，于是我们在找到的3的左右两边顺序扫描，分别找出第一个3和最后一个3。</p>
+</li>
+<li><p>因为要查找的数字在长度为n的数组中有可能出现O(n)次，所以顺序扫描的时间复杂度是O(n)。因此这种算法的效率和直接从头到尾顺序扫描整个数组统计3出现的次数的方法是一样的。</p>
+</li>
 </ul>
 </blockquote>
 <h1 id="思路二"><a href="#思路二" class="headerlink" title="思路二"></a>思路二</h1><p>改进的二分查找</p>
 <blockquote>
 <ul>
-<li>在前面的算法中时间主要消耗在如何确定重复出现的数字的第一个k和最后一个k的位置上，有没有可能用二分查找算法直接找到第一个k及最后一个k呢？</li>
-</ul>
-</blockquote>
-<blockquote>
-<ul>
-<li>我们先分析如何用二分查找算法在数组中找到第一个k。二分查找算法总是先拿数组中间的数字和k作比较。如果中间的数字比k大，那么k只有可能出现在数组的前半段，下一轮我们只在数组的前半段查找就可以了。如果中间的数字比k小，那么k只有可能出现在数组的后半段，下一轮我们只在数组的后半段查找就可以了。如果中间的数字和k相等呢？我们先判断这个数字是不是第一个k。如果位于中间数字的前面一个数字不是k，此时中间的数字刚好就是第一个k。<u><strong>如果中间数字的前面一个数字也是k，也就是说第一个k肯定在数组的前半段，下一轮我们仍然需要在数组的前半段查找。</strong></u></li>
+<li><p>在前面的算法中时间主要消耗在如何确定重复出现的数字的第一个k和最后一个k的位置上，有没有可能用二分查找算法直接找到第一个k及最后一个k呢？</p>
+</li>
+<li><p>我们先分析如何用二分查找算法在数组中找到第一个k。二分查找算法总是先拿数组中间的数字和k作比较。如果中间的数字比k大，那么k只有可能出现在数组的前半段，下一轮我们只在数组的前半段查找就可以了。如果中间的数字比k小，那么k只有可能出现在数组的后半段，下一轮我们只在数组的后半段查找就可以了。如果中间的数字和k相等呢？我们先判断这个数字是不是第一个k。如果位于中间数字的前面一个数字不是k，此时中间的数字刚好就是第一个k。<u><strong>如果中间数字的前面一个数字也是k，也就是说第一个k肯定在数组的前半段，下一轮我们仍然需要在数组的前半段查找。</strong></u></p>
+</li>
 </ul>
 </blockquote>
 <h1 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a>代码实现</h1><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> main</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> <span class="string">"fmt"</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">numberCount</span><span class="params">(nums []<span class="keyword">int</span>, target <span class="keyword">int</span>)</span> <span class="title">int</span></span> &#123;</span><br><span class="line">	<span class="comment">// 二分查找初始化游标</span></span><br><span class="line">	left, right := <span class="number">0</span>, <span class="built_in">len</span>(nums)<span class="number">-1</span></span><br><span class="line">	<span class="keyword">var</span> mid <span class="keyword">int</span></span><br><span class="line">	<span class="keyword">for</span> left &lt; right &#123;</span><br><span class="line">		mid = (left + right) / <span class="number">2</span></span><br><span class="line">		<span class="comment">// 中间元素与查找对象相等，继续在它两边查找</span></span><br><span class="line">		<span class="keyword">if</span> nums[mid] == target &#123;</span><br><span class="line">			<span class="comment">// right在末尾，与中间元素不等，则往前面查找</span></span><br><span class="line">			<span class="keyword">for</span> nums[mid] != nums[right] &#123;</span><br><span class="line">				right--</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="comment">// left在头部，与中间元素不等，则往后顺序查找</span></span><br><span class="line">			<span class="keyword">for</span> nums[mid] != nums[left] &#123;</span><br><span class="line">				left++</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="keyword">break</span></span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">if</span> nums[mid] &gt; target &#123;</span><br><span class="line">			<span class="comment">// 中间元素比目标值大，则在数组的前半段去查找</span></span><br><span class="line">			right = mid - <span class="number">1</span></span><br><span class="line">		&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">			<span class="comment">// 中间元素比目标值大，则在数组的后半段去查找</span></span><br><span class="line">			left = mid + <span class="number">1</span></span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">if</span> left &lt; right &#123;</span><br><span class="line">		<span class="keyword">return</span> right-left+<span class="number">1</span></span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">-1</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">main</span><span class="params">()</span></span> &#123;</span><br><span class="line">	test := []<span class="keyword">int</span>&#123;<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">3</span>, <span class="number">3</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>&#125;</span><br><span class="line">	count := numberCount(test, <span class="number">3</span>)</span><br><span class="line">	fmt.Println(<span class="string">"Count 3 in "</span>, test, <span class="string">": "</span>, count)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 输出如下：</span></span><br><span class="line">Count <span class="number">3</span> in  [<span class="number">1</span> <span class="number">2</span> <span class="number">3</span> <span class="number">3</span> <span class="number">3</span> <span class="number">3</span> <span class="number">4</span> <span class="number">5</span>] :  <span class="number">4</span></span><br><span class="line"></span><br><span class="line">Process finished with exit code <span class="number">0</span></span><br></pre></td></tr></table></figure>
-
 <h1 id="总结与思考"><a href="#总结与思考" class="headerlink" title="总结与思考"></a>总结与思考</h1>
       
     </div>
@@ -1090,6 +1085,28 @@
   
 
   
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+  
+
 
   
 

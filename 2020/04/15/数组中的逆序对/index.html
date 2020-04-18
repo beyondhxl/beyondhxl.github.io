@@ -7,7 +7,7 @@
 
 <html class="theme-next gemini use-motion" lang="zh-Hans">
 <head>
-  <meta charset="UTF-8"/>
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 <meta name="theme-color" content="#222">
@@ -167,7 +167,7 @@
 
 
 
-<meta name="generator" content="Hexo 4.2.0"></head>
+<meta name="generator" content="Hexo 4.2.0"><!-- hexo-inject:begin --><!-- hexo-inject:end --></head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
 
@@ -176,7 +176,7 @@
     
   
 
-  <div class="container sidebar-position-left page-post-detail">
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -471,9 +471,6 @@
 <h1 id="思路一"><a href="#思路一" class="headerlink" title="思路一"></a>思路一</h1><p>顺序扫描整个数组。每扫描到一个数字的时候，逐个比较该数字和它后面的数字的大小。如果后面的数字比它小，则这两个数字就组成了一个逆序对。假设数组中含有n个数字。由于每个数字都要和O(n)个数字作比较，因此这个算法的时间复杂度是O(n^2)。</p>
 <h1 id="思路二"><a href="#思路二" class="headerlink" title="思路二"></a>思路二</h1><p>可以利用归并排序的思想，在排序过程中统计逆序对的个数。<br>一个排序好的数组逆序对数为0。所以从排序角度来看，我们只要将每一个逆序对转换为正序，最后数组则是有序的。问题转换为如何利用排序统计逆序数。将一个逆序变为正序，只需交换两者即可，如果仅仅这样统计交换次数是不够的。比如5432，对于(5，2)这对逆序数，交换(5，2)后，数组序列变为2435，这样会丢失中间(4，2)和(3，2)的逆序对。所以必须基于相邻元素来统计交换次数。那么基于交换相邻元素的排序算法有冒泡排序，插入排序和归并排序（两个子数组合并可看做2个相邻交换，只不过需要特殊处理）。<br>插入排序的复杂度为O(n^2)，归并排序可以达到O(nlogn)。</p>
 <h1 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a>代码实现</h1><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> main</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> <span class="string">"fmt"</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">InverseParis</span><span class="params">(nums []<span class="keyword">int</span>)</span> <span class="title">int</span></span> &#123;</span><br><span class="line">	<span class="comment">// 存储排序好的数组</span></span><br><span class="line">	tmp := <span class="built_in">make</span>([]<span class="keyword">int</span>, <span class="built_in">len</span>(nums))</span><br><span class="line"></span><br><span class="line">	<span class="comment">// 合并两个排序好的数组</span></span><br><span class="line">	<span class="keyword">var</span> merge <span class="function"><span class="keyword">func</span> <span class="params">(start, mid, end <span class="keyword">int</span>)</span> <span class="title">int</span></span></span><br><span class="line">	merge = <span class="function"><span class="keyword">func</span> <span class="params">(start, mid, end <span class="keyword">int</span>)</span> <span class="title">int</span></span> &#123; <span class="comment">// 匿名函数</span></span><br><span class="line">		<span class="keyword">if</span> start &gt;= end &#123;</span><br><span class="line">			<span class="keyword">return</span> <span class="number">0</span></span><br><span class="line">		&#125;</span><br><span class="line">		p1, p2 := mid, end</span><br><span class="line">		k, count := <span class="number">0</span>, <span class="number">0</span></span><br><span class="line">		<span class="keyword">for</span> p1 &gt;= start &amp;&amp; p2 &gt;= mid+<span class="number">1</span> &#123;</span><br><span class="line">			<span class="comment">// 第一个数组中的数字不大于第二个数组中的数字，则进行下一轮的比较</span></span><br><span class="line">			<span class="keyword">if</span> nums[p1] &lt;= nums[p2] &#123;</span><br><span class="line">				tmp[k] = nums[p2]</span><br><span class="line">				p2--</span><br><span class="line">				k++</span><br><span class="line">			&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">					<span class="comment">// 两个数组合并时已排好序，对于num[p1]而言，至少有(p2-mid)个逆序对</span></span><br><span class="line">					tmp[k] = nums[p1]</span><br><span class="line">					count += p2 - mid</span><br><span class="line">					p1--</span><br><span class="line">					k++</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="comment">// p1指向的数字此时都不大于p2指向的数字</span></span><br><span class="line">		<span class="keyword">for</span> p1 &gt;= start &#123;</span><br><span class="line">			tmp[k] = nums[p1]</span><br><span class="line">			p1--</span><br><span class="line">			k++</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">for</span> p2 &gt;= mid+<span class="number">1</span> &#123;</span><br><span class="line">			tmp[k] = nums[p2]</span><br><span class="line">			p2--</span><br><span class="line">			k++</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">for</span> i := <span class="number">0</span>; i &lt;= k<span class="number">-1</span>; i++ &#123;</span><br><span class="line">			nums[end-i] = tmp[i]</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">		<span class="keyword">return</span> count</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">var</span> sort <span class="function"><span class="keyword">func</span> <span class="params">(start, end <span class="keyword">int</span>)</span> <span class="title">int</span></span></span><br><span class="line">	sort = <span class="function"><span class="keyword">func</span> <span class="params">(start, end <span class="keyword">int</span>)</span> <span class="title">int</span></span> &#123;</span><br><span class="line">		count := <span class="number">0</span></span><br><span class="line">		<span class="keyword">if</span> start &lt; end &#123;</span><br><span class="line">			<span class="comment">// 每次排序都从中间分割</span></span><br><span class="line">			mid := (start+end)/<span class="number">2</span></span><br><span class="line">			count += sort(start, mid)</span><br><span class="line">			count += sort(mid+<span class="number">1</span>, end)</span><br><span class="line">			count += merge(start, mid, end)</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">return</span> count</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> sort(<span class="number">0</span>, <span class="built_in">len</span>(nums)<span class="number">-1</span>)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">main</span><span class="params">()</span></span> &#123;</span><br><span class="line">	test := []<span class="keyword">int</span>&#123;<span class="number">7</span>, <span class="number">5</span>, <span class="number">6</span>, <span class="number">4</span>&#125;</span><br><span class="line">	pairs := InverseParis(test)</span><br><span class="line">	fmt.Println(<span class="string">"样例输入："</span>)</span><br><span class="line">	<span class="keyword">for</span> i := <span class="number">0</span>; i &lt; <span class="built_in">len</span>(test); i++ &#123;</span><br><span class="line">		fmt.Println(test[i])</span><br><span class="line">	&#125;</span><br><span class="line">	fmt.Printf(<span class="string">"逆序对个数：%d"</span>, pairs)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 输出如下：</span></span><br><span class="line">样例：</span><br><span class="line"><span class="number">4</span></span><br><span class="line"><span class="number">5</span></span><br><span class="line"><span class="number">6</span></span><br><span class="line"><span class="number">7</span></span><br><span class="line">逆序对个数：<span class="number">5</span></span><br><span class="line">Process finished with exit code <span class="number">0</span></span><br></pre></td></tr></table></figure>
-
-
-
 
       
     </div>
@@ -1073,6 +1070,28 @@
   
 
   
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+  
+
 
   
 
