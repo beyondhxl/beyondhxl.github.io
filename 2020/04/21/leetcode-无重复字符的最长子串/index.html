@@ -117,7 +117,7 @@
 <meta property="og:site_name" content="Beyond">
 <meta property="og:image" content="https://blogimage-1300452281.cos.ap-shanghai.myqcloud.com/%E5%B0%81%E9%9D%A2/zelda.jpg">
 <meta property="article:published_time" content="2020-04-20T22:15:55.000Z">
-<meta property="article:modified_time" content="2020-04-20T15:32:19.962Z">
+<meta property="article:modified_time" content="2020-04-20T16:01:42.588Z">
 <meta property="article:author" content="beyondhxl">
 <meta property="article:tag" content="leetcode">
 <meta name="twitter:card" content="summary">
@@ -481,13 +481,13 @@
 <p>来源：力扣（LeetCode）<br>链接：<a href="https://leetcode-cn.com/problems/longest-substring-without-repeating-characters" target="_blank" rel="noopener">https://leetcode-cn.com/problems/longest-substring-without-repeating-characters</a></p>
 <h1 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h1><blockquote>
 <ul>
-<li><p>设置start标志位和index标志位，index从前往后依次遍历</p>
+<li><p>设置start标志位，从前往后依次遍历字符位置map</p>
 </li>
 <li><p>每次出现的字母，都缓存其最后一次出现的索引</p>
 </li>
-<li><p>如果当前字母的的lastIndex大于或者等于start，则start标志位移动到index的前面一位，否则start标志不移动</p>
+<li><p>如果当前字母的的lastidx大于或者等于start，则start标志位移动到lastidx的前面一位，否则start标志不移动</p>
 </li>
-<li><p>每次遍历都更新lastIndex和maxLength，maxLength=当前遍历位置-start+1，即当前位置和start的距离</p>
+<li><p>每次遍历都更新lastidx和maxlength，maxlength=当前遍历位置-start+1，即当前位置和start的距离</p>
 </li>
 </ul>
 </blockquote>
