@@ -320,6 +320,212 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://beyondhxl.com/2020/04/23/leetcode-%E5%9B%9E%E6%96%87%E6%95%B0/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="beyondhxl">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Beyond">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2020/04/23/leetcode-%E5%9B%9E%E6%96%87%E6%95%B0/" itemprop="url">[leetcode]--回文数</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-04-23T01:02:13Z">
+                2020-04-23
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/leetcode/" itemprop="url" rel="index">
+                    <span itemprop="name">leetcode</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2020/04/23/leetcode-%E5%9B%9E%E6%96%87%E6%95%B0/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2020/04/23/leetcode-%E5%9B%9E%E6%96%87%E6%95%B0/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2020/04/23/leetcode-%E5%9B%9E%E6%96%87%E6%95%B0/" class="leancloud_visitors" data-flag-title="[leetcode]--回文数">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">热度&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+				 <span>℃</span>
+             </span>
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  460
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  1
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h1><p>判断一个整数是否是回文数。回文数是指正序（从左向右）和倒序（从右向左）读都是一样的整数。</p>
+<p>示例 1:</p>
+<p>输入: 121<br>输出: true<br>示例 2:</p>
+<p>输入: -121<br>输出: false<br>解释: 从左向右读, 为 -121 。 从右向左读, 为 121- 。因此它不是一个回文数。<br>示例 3:</p>
+<p>输入: 10<br>输出: false<br>解释: 从右向左读, 为 01 。因此它不是一个回文数。<br>进阶:</p>
+<p>你能不将整数转为字符串来解决这个问题吗？</p>
+<p>来源：力扣（LeetCode）<br>链接：<a href="https://leetcode-cn.com/problems/palindrome-number" target="_blank" rel="noopener">https://leetcode-cn.com/problems/palindrome-number</a></p>
+<h1 id="思路一"><a href="#思路一" class="headerlink" title="思路一"></a>思路一</h1><h2 id="反转一半数字"><a href="#反转一半数字" class="headerlink" title="反转一半数字"></a>反转一半数字</h2><p>回文的特点是首尾是一样的，利用这个特性，只需要反转一半数字。在循环内原数字不断迭代处理后如果大于新数字时循环就退出。</p>
+<p><img src="https://blogimage-1300452281.cos.ap-shanghai.myqcloud.com/%E5%8D%9A%E5%AE%A2/leetcode/%E5%9B%9E%E6%96%87.jpg" alt="回文数"></p>
+<h2 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a>代码实现</h2><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 反转一半数字</span></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">isPalindrome1</span><span class="params">(x <span class="keyword">int</span>)</span> <span class="title">bool</span></span> &#123;</span><br><span class="line">	<span class="comment">// 负数不是回文数</span></span><br><span class="line">	<span class="comment">// 如果数字最后一位是0，只有数字0满足回文特征，因为多位整数不可能是0开头的</span></span><br><span class="line">	<span class="keyword">if</span> x &lt; <span class="number">0</span> || (x%<span class="number">10</span> == <span class="number">0</span> &amp;&amp; x != <span class="number">0</span>) &#123;</span><br><span class="line">		<span class="keyword">return</span> <span class="literal">false</span></span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	revertnum := <span class="number">0</span></span><br><span class="line">	<span class="keyword">for</span> x &gt; revertnum &#123;</span><br><span class="line">		revertnum = revertnum*<span class="number">10</span> + x%<span class="number">10</span></span><br><span class="line">		x = x / <span class="number">10</span></span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="comment">// 数字长度是奇数时，中间的数字不影响回文的，如12321</span></span><br><span class="line">	<span class="keyword">return</span> x == revertnum || x == revertnum/<span class="number">10</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="思路二"><a href="#思路二" class="headerlink" title="思路二"></a>思路二</h1><h2 id="转换为字符串"><a href="#转换为字符串" class="headerlink" title="转换为字符串"></a>转换为字符串</h2><p>用两个游标从转换后的字符串首尾向中间移动，每移动一步就比较对应的两个字符是否相等，循环结束条件是首尾游标位置相遇。</p>
+<h2 id="代码实现-1"><a href="#代码实现-1" class="headerlink" title="代码实现"></a>代码实现</h2><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//	解法二</span></span><br><span class="line"><span class="comment">//	转换为字符串</span></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">isPalindrome2</span><span class="params">(x <span class="keyword">int</span>)</span> <span class="title">bool</span></span> &#123;</span><br><span class="line">	<span class="keyword">if</span> x &lt; <span class="number">0</span> || (x%<span class="number">10</span> == <span class="number">0</span> &amp;&amp; x != <span class="number">0</span>) &#123;</span><br><span class="line">		<span class="keyword">return</span> <span class="literal">false</span></span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	s := strconv.Itoa(x)</span><br><span class="line">	<span class="keyword">for</span> i, j := <span class="number">0</span>, <span class="built_in">len</span>(s)<span class="number">-1</span>; i &lt; j; i, j = i+<span class="number">1</span>, j<span class="number">-1</span> &#123;</span><br><span class="line">		<span class="keyword">if</span> s[i] != s[j] &#123;</span><br><span class="line">			<span class="keyword">return</span> <span class="literal">false</span></span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">return</span> <span class="literal">true</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://beyondhxl.com/2020/04/22/Z%E5%AD%97%E5%BD%A2%E5%8F%98%E6%8D%A2/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -2141,205 +2347,6 @@ f(n)
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://beyondhxl.com/2020/04/15/%E6%95%B0%E7%BB%84%E4%B8%AD%E7%9A%84%E9%80%86%E5%BA%8F%E5%AF%B9/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="beyondhxl">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Beyond">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2020/04/15/%E6%95%B0%E7%BB%84%E4%B8%AD%E7%9A%84%E9%80%86%E5%BA%8F%E5%AF%B9/" itemprop="url">数组中的逆序对</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-04-15T01:45:57Z">
-                2020-04-15
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/" itemprop="url" rel="index">
-                    <span itemprop="name">数据结构与算法</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2020/04/15/%E6%95%B0%E7%BB%84%E4%B8%AD%E7%9A%84%E9%80%86%E5%BA%8F%E5%AF%B9/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2020/04/15/%E6%95%B0%E7%BB%84%E4%B8%AD%E7%9A%84%E9%80%86%E5%BA%8F%E5%AF%B9/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-             <span id="/2020/04/15/%E6%95%B0%E7%BB%84%E4%B8%AD%E7%9A%84%E9%80%86%E5%BA%8F%E5%AF%B9/" class="leancloud_visitors" data-flag-title="数组中的逆序对">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">热度&#58;</span>
-               
-                 <span class="leancloud-visitors-count"></span>
-				 <span>℃</span>
-             </span>
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数统计&#58;</span>
-                
-                <span title="字数统计">
-                  788
-                </span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
-                
-                <span title="阅读时长">
-                  3
-                </span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="题意"><a href="#题意" class="headerlink" title="题意"></a>题意</h1><p>题目描述</p>
-<p>在数组中的两个数字，如果前面一个数字大于后面的数字，则这两个数字组成一个逆序对。输入一个数组，求出这个数组中的逆序对的总数。<br>样例：<br>输入：[7，5，6，4]<br>输出：5</p>
-<h1 id="思路一"><a href="#思路一" class="headerlink" title="思路一"></a>思路一</h1><p>顺序扫描整个数组。每扫描到一个数字的时候，逐个比较该数字和它后面的数字的大小。如果后面的数字比它小，则这两个数字就组成了一个逆序对。假设数组中含有n个数字。由于每个数字都要和O(n)个数字作比较，因此这个算法的时间复杂度是O(n^2)。</p>
-<h1 id="思路二"><a href="#思路二" class="headerlink" title="思路二"></a>思路二</h1><p>可以利用归并排序的思想，在排序过程中统计逆序对的个数。<br>一个排序好的数组逆序对数为0。所以从排序角度来看，我们只要将每一个逆序对转换为正序，最后数组则是有序的。问题转换为如何利用排序统计逆序数。将一个逆序变为正序，只需交换两者即可，如果仅仅这样统计交换次数是不够的。比如5432，对于(5，2)这对逆序数，交换(5，2)后，数组序列变为2435，这样会丢失中间(4，2)和(3，2)的逆序对。所以必须基于相邻元素来统计交换次数。那么基于交换相邻元素的排序算法有冒泡排序，插入排序和归并排序（两个子数组合并可看做2个相邻交换，只不过需要特殊处理）。<br>插入排序的复杂度为O(n^2)，归并排序可以达到O(nlogn)。</p>
-<h1 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a>代码实现</h1><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> main</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> <span class="string">"fmt"</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">InverseParis</span><span class="params">(nums []<span class="keyword">int</span>)</span> <span class="title">int</span></span> &#123;</span><br><span class="line">	<span class="comment">// 存储排序好的数组</span></span><br><span class="line">	tmp := <span class="built_in">make</span>([]<span class="keyword">int</span>, <span class="built_in">len</span>(nums))</span><br><span class="line"></span><br><span class="line">	<span class="comment">// 合并两个排序好的数组</span></span><br><span class="line">	<span class="keyword">var</span> merge <span class="function"><span class="keyword">func</span> <span class="params">(start, mid, end <span class="keyword">int</span>)</span> <span class="title">int</span></span></span><br><span class="line">	merge = <span class="function"><span class="keyword">func</span> <span class="params">(start, mid, end <span class="keyword">int</span>)</span> <span class="title">int</span></span> &#123; <span class="comment">// 匿名函数</span></span><br><span class="line">		<span class="keyword">if</span> start &gt;= end &#123;</span><br><span class="line">			<span class="keyword">return</span> <span class="number">0</span></span><br><span class="line">		&#125;</span><br><span class="line">		p1, p2 := mid, end</span><br><span class="line">		k, count := <span class="number">0</span>, <span class="number">0</span></span><br><span class="line">		<span class="keyword">for</span> p1 &gt;= start &amp;&amp; p2 &gt;= mid+<span class="number">1</span> &#123;</span><br><span class="line">			<span class="comment">// 第一个数组中的数字不大于第二个数组中的数字，则进行下一轮的比较</span></span><br><span class="line">			<span class="keyword">if</span> nums[p1] &lt;= nums[p2] &#123;</span><br><span class="line">				tmp[k] = nums[p2]</span><br><span class="line">				p2--</span><br><span class="line">				k++</span><br><span class="line">			&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">					<span class="comment">// 两个数组合并时已排好序，对于num[p1]而言，至少有(p2-mid)个逆序对</span></span><br><span class="line">					tmp[k] = nums[p1]</span><br><span class="line">					count += p2 - mid</span><br><span class="line">					p1--</span><br><span class="line">					k++</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="comment">// p1指向的数字此时都不大于p2指向的数字</span></span><br><span class="line">		<span class="keyword">for</span> p1 &gt;= start &#123;</span><br><span class="line">			tmp[k] = nums[p1]</span><br><span class="line">			p1--</span><br><span class="line">			k++</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">for</span> p2 &gt;= mid+<span class="number">1</span> &#123;</span><br><span class="line">			tmp[k] = nums[p2]</span><br><span class="line">			p2--</span><br><span class="line">			k++</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">for</span> i := <span class="number">0</span>; i &lt;= k<span class="number">-1</span>; i++ &#123;</span><br><span class="line">			nums[end-i] = tmp[i]</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">		<span class="keyword">return</span> count</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">var</span> sort <span class="function"><span class="keyword">func</span> <span class="params">(start, end <span class="keyword">int</span>)</span> <span class="title">int</span></span></span><br><span class="line">	sort = <span class="function"><span class="keyword">func</span> <span class="params">(start, end <span class="keyword">int</span>)</span> <span class="title">int</span></span> &#123;</span><br><span class="line">		count := <span class="number">0</span></span><br><span class="line">		<span class="keyword">if</span> start &lt; end &#123;</span><br><span class="line">			<span class="comment">// 每次排序都从中间分割</span></span><br><span class="line">			mid := (start+end)/<span class="number">2</span></span><br><span class="line">			count += sort(start, mid)</span><br><span class="line">			count += sort(mid+<span class="number">1</span>, end)</span><br><span class="line">			count += merge(start, mid, end)</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">return</span> count</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> sort(<span class="number">0</span>, <span class="built_in">len</span>(nums)<span class="number">-1</span>)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">main</span><span class="params">()</span></span> &#123;</span><br><span class="line">	test := []<span class="keyword">int</span>&#123;<span class="number">7</span>, <span class="number">5</span>, <span class="number">6</span>, <span class="number">4</span>&#125;</span><br><span class="line">	pairs := InverseParis(test)</span><br><span class="line">	fmt.Println(<span class="string">"样例输入："</span>)</span><br><span class="line">	<span class="keyword">for</span> i := <span class="number">0</span>; i &lt; <span class="built_in">len</span>(test); i++ &#123;</span><br><span class="line">		fmt.Println(test[i])</span><br><span class="line">	&#125;</span><br><span class="line">	fmt.Printf(<span class="string">"逆序对个数：%d"</span>, pairs)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 输出如下：</span></span><br><span class="line">样例：</span><br><span class="line"><span class="number">4</span></span><br><span class="line"><span class="number">5</span></span><br><span class="line"><span class="number">6</span></span><br><span class="line"><span class="number">7</span></span><br><span class="line">逆序对个数：<span class="number">5</span></span><br><span class="line">Process finished with exit code <span class="number">0</span></span><br></pre></td></tr></table></figure>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -2395,7 +2402,7 @@ f(n)
               
                 <a href="/archives/%7C%7Carchive">
               
-                  <span class="site-state-item-count">19</span>
+                  <span class="site-state-item-count">20</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -2543,7 +2550,7 @@ show_date_time();
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">11.6k</span>
+    <span title="Site words total count">12.1k</span>
   
 </div>
 
