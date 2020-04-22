@@ -117,7 +117,7 @@
 <meta property="og:site_name" content="Beyond">
 <meta property="og:image" content="https://blogimage-1300452281.cos.ap-shanghai.myqcloud.com/%E5%B0%81%E9%9D%A2/206183.jpg">
 <meta property="article:published_time" content="2020-04-22T01:56:27.000Z">
-<meta property="article:modified_time" content="2020-04-21T19:07:43.828Z">
+<meta property="article:modified_time" content="2020-04-21T19:09:42.263Z">
 <meta property="article:author" content="beyondhxl">
 <meta property="article:tag" content="leetcode">
 <meta name="twitter:card" content="summary">
@@ -490,9 +490,9 @@
   T     S     G
 </code></pre><p>来源：力扣（LeetCode）<br>链接：<a href="https://leetcode-cn.com/problems/zigzag-conversion" target="_blank" rel="noopener">https://leetcode-cn.com/problems/zigzag-conversion</a></p>
 <h1 id="思路一"><a href="#思路一" class="headerlink" title="思路一"></a>思路一</h1><p>将字符对应的索引显示，以numRows=3为例，行优先打印出字符</p>
-<pre><code>             0|        1   5   9     13
-             1|        2 4 6 8 10 12 14 16
-             2|        3   7   11    15
+<pre><code>                            0|        1   5   9     13
+                            1|        2 4 6 8 10 12 14 16
+                            2|        3   7   11    15
 </code></pre><p>每一行右边的字符的索引值都是其左边的字符的索引值加上它下面剩余行数的两倍或上面行数的两倍(具体看两个字符所在的行)</p>
 <p>因为两个字符目前在同一行，所以左边的字符是经过从上到下的，然后斜着从左到右到右边的字符，或者相反。例如：</p>
 <blockquote class="blockquote-center">4 == 2(左边的索引) + 2(两倍) \* 1(4的下面有一行)
@@ -709,7 +709,8 @@
                 
               </ul>
 			  
-		  <div id="days"></div>
+		  <!--
+<div id="days"></div>
 <script>
 function show_date_time(){
     window.setTimeout("show_date_time()", 1000);
@@ -736,6 +737,7 @@ function setzero(i) {
 }
 show_date_time();
 </script>
+-->
 
             </div>
           
@@ -810,6 +812,34 @@ show_date_time();
 
   <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Gemini</a> v5.1.4</div>
 
+
+<div id="days"></div>
+<script>
+function show_date_time(){
+    window.setTimeout("show_date_time()", 1000);
+    BirthDay=new Date("04/15/2020 15:00:00");
+    today=new Date();
+    timeold=(today.getTime()-BirthDay.getTime());
+    sectimeold=timeold/1000
+    secondsold=Math.floor(sectimeold);
+    msPerDay=24*60*60*1000
+    e_daysold=timeold/msPerDay
+    daysold=Math.floor(e_daysold);
+    e_hrsold=(e_daysold-daysold)*24;
+    hrsold=setzero(Math.floor(e_hrsold));
+    e_minsold=(e_hrsold-hrsold)*60;
+    minsold=setzero(Math.floor((e_hrsold-hrsold)*60));
+    seconds=setzero(Math.floor((e_minsold-minsold)*60));
+    document.getElementById('days').innerHTML="本站已运行 "+daysold+" 天 "+hrsold+" 小时 "+minsold+" 分 "+seconds+" 秒";
+}
+function setzero(i) {
+    if (i<10) {
+        i="0" + i
+    };
+    return i;
+}
+show_date_time();
+</script>
 
 
 
