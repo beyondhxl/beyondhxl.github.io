@@ -22,6 +22,7 @@ $(document).ready(function () {
     }
 
     setSidebarMarginTop(headerOffset).css({ 'margin-left': 'initial' });
+	
   }
 
   function resizeListener () {
