@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://beyondhxl.com/"/>
-  <updated>2020-05-07T09:27:44.944Z</updated>
+  <updated>2020-05-08T23:21:52.884Z</updated>
   <id>http://beyondhxl.com/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>博客--配置RSS订阅</title>
+    <link href="http://beyondhxl.com/2020/05/09/%E5%8D%9A%E5%AE%A2-%E9%85%8D%E7%BD%AERSS%E8%AE%A2%E9%98%85/"/>
+    <id>http://beyondhxl.com/2020/05/09/%E5%8D%9A%E5%AE%A2-%E9%85%8D%E7%BD%AERSS%E8%AE%A2%E9%98%85/</id>
+    <published>2020-05-09T06:20:01.000Z</published>
+    <updated>2020-05-08T23:21:52.884Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="一、什么是RSS？"><a href="#一、什么是RSS？" class="headerlink" title="一、什么是RSS？"></a>一、什么是RSS？</h3><p>RSS（简易信息聚合，也叫Really Simple Syndication、聚合RSS、聚合内容），是一种消息来源格式规范，用以聚合经常发布更新数据的网站，例如博客文章、新闻、音频或视频的网摘。RSS文件（或称做摘要、网络摘要、或频更新，提供到频道）包含了全文或是节录的文字，再加上使用者所订阅之网摘要数据和授权的元数据。通常在时效性比较强的内容上使用RSS订阅能更快速获取信息，网站提供RSS输出，有利于让用户获取网站内容的最新更新。网络用户可以在客户端借助于支持RSS的聚合工具软件（例如SharpReader、NewzCrawler、FeedDemon），在不打开网站内容页面的情况下阅读支持RSS输出的网站内容。</p><a id="more"></a><h3 id="二、将博客RSS配置成可订阅的"><a href="#二、将博客RSS配置成可订阅的" class="headerlink" title="二、将博客RSS配置成可订阅的"></a>二、将博客RSS配置成可订阅的</h3><p>最近更换了博客主题，新主题有一个可以让浏览网站的用户通过邮件订阅的挂件。</p><p><img src="https://blogimage-1300452281.cos.ap-shanghai.myqcloud.com/%E5%8D%9A%E5%AE%A2/RSS%E8%AE%A2%E9%98%85/RSS.png" alt="RSS"></p><p>新主题的_config.yml文件下，需要通过Google FeedBurner配置，feedburner_id需要注册得到。</p><h3 id="三、配置步骤"><a href="#三、配置步骤" class="headerlink" title="三、配置步骤"></a>三、配置步骤</h3><p>登录 <a href="http://www.feedburner.com">http://www.feedburner.com</a> 注册一个用户，并且博客的RSS/ATOM地址注册，同时选取一个在feedburner上的发布地址，形如：<a href="http://feeds.feedburner.com/abc，">http://feeds.feedburner.com/abc，</a> 其他用户就可以使用这个地址订阅你博客的RSS/ATOM了。<br><img src="https://blogimage-1300452281.cos.ap-shanghai.myqcloud.com/%E5%8D%9A%E5%AE%A2/RSS%E8%AE%A2%E9%98%85/RSS1.png" alt="RSS1"></p><p>配置完成后，就可以看到博客的feeds了。<br><img src="https://blogimage-1300452281.cos.ap-shanghai.myqcloud.com/%E5%8D%9A%E5%AE%A2/RSS%E8%AE%A2%E9%98%85/RSS2.png" alt="RSS2"></p><p>最后开启邮件订阅功能，博客更新了，订阅的用户就会在第一时间收到最新内容。<br><img src="https://blogimage-1300452281.cos.ap-shanghai.myqcloud.com/%E5%8D%9A%E5%AE%A2/RSS%E8%AE%A2%E9%98%85/RSS3.png" alt="RSS3"></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;一、什么是RSS？&quot;&gt;&lt;a href=&quot;#一、什么是RSS？&quot; class=&quot;headerlink&quot; title=&quot;一、什么是RSS？&quot;&gt;&lt;/a&gt;一、什么是RSS？&lt;/h3&gt;&lt;p&gt;RSS（简易信息聚合，也叫Really Simple Syndication、聚合RSS、聚合内容），是一种消息来源格式规范，用以聚合经常发布更新数据的网站，例如博客文章、新闻、音频或视频的网摘。RSS文件（或称做摘要、网络摘要、或频更新，提供到频道）包含了全文或是节录的文字，再加上使用者所订阅之网摘要数据和授权的元数据。通常在时效性比较强的内容上使用RSS订阅能更快速获取信息，网站提供RSS输出，有利于让用户获取网站内容的最新更新。网络用户可以在客户端借助于支持RSS的聚合工具软件（例如SharpReader、NewzCrawler、FeedDemon），在不打开网站内容页面的情况下阅读支持RSS输出的网站内容。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="博客" scheme="http://beyondhxl.com/categories/%E5%8D%9A%E5%AE%A2/"/>
+    
+      <category term="RSS订阅" scheme="http://beyondhxl.com/categories/%E5%8D%9A%E5%AE%A2/RSS%E8%AE%A2%E9%98%85/"/>
+    
+    
+      <category term="RSS订阅" scheme="http://beyondhxl.com/tags/RSS%E8%AE%A2%E9%98%85/"/>
+    
+  </entry>
   
   <entry>
     <title>[leetcode]--外观数列</title>
@@ -477,33 +502,6 @@
       
         &lt;h1 id=&quot;题意&quot;&gt;&lt;a href=&quot;#题意&quot; class=&quot;headerlink&quot; title=&quot;题意&quot;&gt;&lt;/a&gt;题意&lt;/h1&gt;&lt;p&gt;题目描述&lt;/p&gt;
 &lt;p&gt;在数组中的两个数字，如果前面一个数字大于后面的数字，则这两个数字组成一个逆序对。输入一个数组，求出这个数组中的逆序对
-      
-    
-    </summary>
-    
-    
-      <category term="数据结构与算法" scheme="http://beyondhxl.com/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/"/>
-    
-    
-      <category term="数据结构与算法" scheme="http://beyondhxl.com/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>二叉搜索树与双向链表</title>
-    <link href="http://beyondhxl.com/2020/04/13/%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91%E4%B8%8E%E5%8F%8C%E5%90%91%E9%93%BE%E8%A1%A8/"/>
-    <id>http://beyondhxl.com/2020/04/13/%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91%E4%B8%8E%E5%8F%8C%E5%90%91%E9%93%BE%E8%A1%A8/</id>
-    <published>2020-04-13T01:25:32.000Z</published>
-    <updated>2020-04-12T17:58:31.807Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="题意"><a href="#题意" class="headerlink" title="题意"></a>题意</h2><p>题目描述</p><p>输入一棵二叉搜索树，将该二叉搜索树转换成一个排序的双向链表。要求不能创建任何新的结点，只能调整树中结点指针的指向。</p><h2 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h2><blockquote><ul><li>二叉排序树的每个节点均由两个指针指向其两个孩子，双向链表中每个节点又都有两个指针指向其前驱和后继</li></ul></blockquote><blockquote><ul><li>二叉排序树的左节点的值 &lt; 根结点的值 &lt; 右子节点的值，其中序遍历就是一个排序好的信息串</li></ul></blockquote><p>对应两种方法实现：</p><blockquote><ul><li>中序遍历来实现二叉搜索树向双向链表的转换，访问过程需修改为链接操作</li></ul></blockquote><blockquote><ul><li>把左子树和右子树都转换成排序的双向链表之后再和根节点链接起来，整棵二叉搜索树就转换成了排序的双向链表</li></ul></blockquote><h2 id="中序遍历"><a href="#中序遍历" class="headerlink" title="中序遍历"></a>中序遍历</h2><p>中序遍历中当前结点的前一个节点：</p><blockquote><ul><li>要么是当前结点的左子树的的最右孩子</li><li>要么是当前结点其前一个节点的右孩子</li></ul></blockquote><h2 id="代码实现-采用递归"><a href="#代码实现-采用递归" class="headerlink" title="代码实现(采用递归)"></a>代码实现(采用递归)</h2><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> main</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> (</span><br><span class="line"><span class="string">"fmt"</span></span><br><span class="line">)</span><br><span class="line"></span><br><span class="line"><span class="keyword">type</span> TreeNode <span class="keyword">struct</span> &#123;</span><br><span class="line">Val <span class="keyword">int</span></span><br><span class="line">Left *TreeNode</span><br><span class="line">Right *TreeNode</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> tail *TreeNode = <span class="literal">nil</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">ConvertRecursion</span><span class="params">(root *TreeNode)</span> *<span class="title">TreeNode</span></span> &#123;</span><br><span class="line"><span class="keyword">if</span> root == <span class="literal">nil</span> &#123;</span><br><span class="line"><span class="keyword">return</span> <span class="literal">nil</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 如果左子树为空，则根结点root为双向链表的头结点</span></span><br><span class="line">head := ConvertRecursion(root.Left)</span><br><span class="line"><span class="keyword">if</span> head == <span class="literal">nil</span> &#123;</span><br><span class="line">head = root</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 连接当前结点root和当前链表的尾结点tail</span></span><br><span class="line">root.Left = tail</span><br><span class="line"><span class="keyword">if</span> tail != <span class="literal">nil</span> &#123;</span><br><span class="line">tail.Right = root</span><br><span class="line">&#125;</span><br><span class="line">tail = root</span><br><span class="line"></span><br><span class="line"><span class="comment">// 遍历当前结点的右子树</span></span><br><span class="line">ConvertRecursion(root.Right)</span><br><span class="line"></span><br><span class="line"><span class="keyword">return</span> head</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">main</span><span class="params">()</span></span> &#123;</span><br><span class="line"><span class="comment">//     4</span></span><br><span class="line"><span class="comment">//   3   5</span></span><br><span class="line"><span class="comment">// 2</span></span><br><span class="line">node2 := &amp;TreeNode&#123;<span class="number">2</span>, <span class="literal">nil</span>, <span class="literal">nil</span>&#125;</span><br><span class="line">node3 := &amp;TreeNode&#123;<span class="number">3</span>, node2, <span class="literal">nil</span>&#125;</span><br><span class="line">node5 := &amp;TreeNode&#123;<span class="number">5</span>, <span class="literal">nil</span>, <span class="literal">nil</span>&#125;</span><br><span class="line">node4 := &amp;TreeNode&#123;<span class="number">4</span>, node3, node5&#125;</span><br><span class="line">head := ConvertRecursion(node4)</span><br><span class="line"><span class="keyword">for</span> head != <span class="literal">nil</span> &#123;</span><br><span class="line">fmt.Println()</span><br><span class="line">fmt.Printf(<span class="string">"curval: %d"</span>, head.Val)</span><br><span class="line">head = head.Right</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">for</span> tail != <span class="literal">nil</span> &#123;</span><br><span class="line">fmt.Println()</span><br><span class="line">fmt.Printf(<span class="string">"curval: %d"</span>, tail.Val)</span><br><span class="line">tail = tail.Left</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 输出如下：</span></span><br><span class="line">curval: <span class="number">2</span></span><br><span class="line">curval: <span class="number">3</span></span><br><span class="line">curval: <span class="number">4</span></span><br><span class="line">curval: <span class="number">5</span></span><br><span class="line">curval: <span class="number">5</span></span><br><span class="line">curval: <span class="number">4</span></span><br><span class="line">curval: <span class="number">3</span></span><br><span class="line">curval: <span class="number">2</span></span><br><span class="line"></span><br><span class="line">Process finished with exit code <span class="number">0</span></span><br></pre></td></tr></table></figure><h2 id="总结与思考"><a href="#总结与思考" class="headerlink" title="总结与思考"></a>总结与思考</h2><blockquote><ul><li>ConvertRecursion函数的功能。<br>1、输入：输入一个二叉搜索树的根节点。<br>2、过程：将其转化为一个有序的双向链表。<br>3、输出：返回该链表的头节点。</li></ul></blockquote><blockquote><ul><li>tail节点的作用<br>1、用于记录当前链表的末尾节点。</li></ul></blockquote><blockquote><ul><li>递归过程<br>1、按照中序遍历，将整个树分解成了无数的小树，然后将他们分别转化成一小段一小段的双向链表。再利用tail节点记录总的链表的末尾，然后将这些小段链表一个接一个地加到末尾。</li></ul></blockquote><h3 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h3><p><a href="https://blog.csdn.net/gatieme/article/details/51234524">剑指Offer–027-二叉搜索树与双向链表</a></p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h2 id=&quot;题意&quot;&gt;&lt;a href=&quot;#题意&quot; class=&quot;headerlink&quot; title=&quot;题意&quot;&gt;&lt;/a&gt;题意&lt;/h2&gt;&lt;p&gt;题目描述&lt;/p&gt;
-&lt;p&gt;输入一棵二叉搜索树，将该二叉搜索树转换成一个排序的双向链表。要求不能创建任何新的结点，只能调整树中结点指针的指向。&lt;
       
     
     </summary>
