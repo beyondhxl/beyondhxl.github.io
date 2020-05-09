@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://beyondhxl.com/"/>
-  <updated>2020-05-08T23:21:52.884Z</updated>
+  <updated>2020-05-05T22:18:15.066Z</updated>
   <id>http://beyondhxl.com/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>计算机网络</title>
+    <link href="http://beyondhxl.com/2020/05/09/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/"/>
+    <id>http://beyondhxl.com/2020/05/09/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/</id>
+    <published>2020-05-09T10:33:30.614Z</published>
+    <updated>2020-05-05T22:18:15.066Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="计算机网络基础"><a href="#计算机网络基础" class="headerlink" title="计算机网络基础"></a>计算机网络基础</h1><ul><li><a href="计算机网络-概述">计算机网络概述</a></li><li><a href="计算机网络-物理层">计算机网络-物理层</a></li><li><a href="计算机网络-链路层">计算机网络-数据链路层</a></li><li><a href="计算机网络-网络层">计算机网络-网络层</a></li><li><a href="计算机网络-传输层">计算机网络-传输层</a></li><li><a href="计算机网络-应用层">计算机网络-应用层</a></li></ul><h1 id="计算机网络复习脉络"><a href="#计算机网络复习脉络" class="headerlink" title="计算机网络复习脉络"></a>计算机网络复习脉络</h1><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line">复习方法：反复理解记忆，多问为什么，物理层几乎不需要掌握。</span><br><span class="line"></span><br><span class="line"><span class="number">1.</span> TCP/IP协议体系的认知</span><br><span class="line"><span class="number">2.</span> 数据链路层</span><br><span class="line">（<span class="number">1</span>）以太网帧格式</span><br><span class="line">（<span class="number">2</span>）MTU的概念</span><br><span class="line">（<span class="number">3</span>）ARP协议和RARP协议（严格上说ARP协议归类于网络层），掌握ARP缓存的原理</span><br><span class="line"><span class="number">3.</span> 网络层</span><br><span class="line">（<span class="number">1</span>）掌握IP的首部格式</span><br><span class="line">（<span class="number">2</span>）掌握IP的分片</span><br><span class="line">（<span class="number">3</span>）掌握IP的选路，即路由表</span><br><span class="line">（<span class="number">4</span>）ICMP协议</span><br><span class="line"><span class="number">1</span>) 掌握报文格式</span><br><span class="line"><span class="number">2</span>）分类：查询+差错</span><br><span class="line"><span class="number">3</span>）两种+五种</span><br><span class="line"><span class="number">4.</span>传输层</span><br><span class="line">（<span class="number">1</span>）UDP，次要一点，掌握特点和首部各个字段</span><br><span class="line">（<span class="number">2</span>）掌握TCP</span><br><span class="line"><span class="number">1</span>）特点+首部字段+传输可靠机制</span><br><span class="line"><span class="number">2</span>）连接控制：三次握手，四次挥手，同时打开，同时关闭，半关闭</span><br><span class="line"><span class="number">3</span>）流量控制机制：滑动窗口，慢启动，拥塞控制，快速重传，快速恢复</span><br><span class="line"><span class="number">4</span>）超时重传机制</span><br><span class="line"><span class="number">5.</span>应用层</span><br><span class="line">（<span class="number">1</span>）掌握DNS协议</span><br><span class="line"><span class="number">1</span>）名字空间</span><br><span class="line"><span class="number">2</span>）指针查询（反向查找或逆向解析）基本原理</span><br><span class="line"><span class="number">3</span>）DNS协议</span><br><span class="line">（<span class="number">2</span>）FTP协议</span><br><span class="line"><span class="number">1</span>）控制流和数据流</span><br><span class="line"><span class="number">2</span>）两种工作模式：PASV和PORT</span><br><span class="line"><span class="number">3</span>）各种指令和响应码</span><br><span class="line"><span class="number">4</span>）断点重传和匿名FTP的概念</span><br><span class="line">（<span class="number">3</span>）HTTP协议</span><br><span class="line"><span class="number">1</span>）报文格式：请求报文，响应报文，请求头各种字段，响应头各种字段</span><br><span class="line"><span class="number">2</span>）HTTP的状态码</span><br><span class="line">（<span class="number">4</span>）HTTPS协议</span><br><span class="line"><span class="number">1</span>）握手的详细过程</span><br><span class="line"><span class="number">2</span>）摘要算法，数字签名，数字证书的原理和过程</span><br></pre></td></tr></table></figure><h1 id="计网面试题"><a href="#计网面试题" class="headerlink" title="计网面试题"></a>计网面试题</h1><p>附件：<a href="https://docsify-1258928558.cos.ap-guangzhou.myqcloud.com/computer-network-interview.pdf" download="计算机网络面试.pdf">计算机网络面试题总结.pdf</a></p><br/><br/>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;计算机网络基础&quot;&gt;&lt;a href=&quot;#计算机网络基础&quot; class=&quot;headerlink&quot; title=&quot;计算机网络基础&quot;&gt;&lt;/a&gt;计算机网络基础&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;计算机网络-概述&quot;&gt;计算机网络概述&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a
+        
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
   
   <entry>
     <title>博客--配置RSS订阅</title>
