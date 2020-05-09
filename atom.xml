@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://beyondhxl.com/"/>
-  <updated>2020-05-09T16:56:59.278Z</updated>
+  <updated>2020-05-09T19:32:01.378Z</updated>
   <id>http://beyondhxl.com/</id>
   
   <author>
@@ -17,11 +17,11 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>博客--配置RSS订阅</title>
+    <title>博客-配置RSS订阅</title>
     <link href="http://beyondhxl.com/2020/05/09/%E5%8D%9A%E5%AE%A2-%E9%85%8D%E7%BD%AERSS%E8%AE%A2%E9%98%85/"/>
     <id>http://beyondhxl.com/2020/05/09/%E5%8D%9A%E5%AE%A2-%E9%85%8D%E7%BD%AERSS%E8%AE%A2%E9%98%85/</id>
     <published>2020-05-09T06:20:01.000Z</published>
-    <updated>2020-05-09T16:56:59.278Z</updated>
+    <updated>2020-05-09T19:32:01.378Z</updated>
     
     <content type="html"><![CDATA[<h3 id="一、什么是RSS？"><a href="#一、什么是RSS？" class="headerlink" title="一、什么是RSS？"></a>一、什么是RSS？</h3><p>RSS（简易信息聚合，也叫Really Simple Syndication、聚合RSS、聚合内容），是一种消息来源格式规范，用以聚合经常发布更新数据的网站，例如博客文章、新闻、音频或视频的网摘。通常在时效性比较强的内容上使用RSS订阅能更快速获取信息，网站提供RSS输出，有利于让用户获取网站内容的最新更新。网络用户可以在客户端借助于支持RSS的聚合工具软件（例如SharpReader、NewzCrawler、FeedDemon），在不打开网站内容页面的情况下阅读支持RSS输出的网站内容。</p><a id="more"></a><h3 id="二、为什么需要RSS？"><a href="#二、为什么需要RSS？" class="headerlink" title="二、为什么需要RSS？"></a>二、为什么需要RSS？</h3><p>网络上的信息铺天盖地，个人的时间和精力有限，无法面面俱到。RSS可以主动推送用户关注的信息，这样也提高了阅读体验。</p><h3 id="三、将博客RSS配置成可订阅的"><a href="#三、将博客RSS配置成可订阅的" class="headerlink" title="三、将博客RSS配置成可订阅的"></a>三、将博客RSS配置成可订阅的</h3><p>最近更换了博客主题，新主题有一个可以让浏览网站的用户邮件订阅博客RSS的挂件。</p><p><img src="https://blogimage-1300452281.cos.ap-shanghai.myqcloud.com/%E5%8D%9A%E5%AE%A2/RSS%E8%AE%A2%E9%98%85/RSS.png" alt="RSS"></p><p>需要通过Google FeedBurner配置，进而获得注册后的feedburner_id，然后在主题配置文件下打开对应的订阅RSS开关即可。</p><h3 id="四、配置步骤"><a href="#四、配置步骤" class="headerlink" title="四、配置步骤"></a>四、配置步骤</h3><p>登录 <a href="http://www.feedburner.com">http://www.feedburner.com</a> 注册一个用户，将博客的RSS/ATOM地址注册，同时选取一个在feedburner上的发布地址，形如：<a href="http://feeds.feedburner.com/abc，">http://feeds.feedburner.com/abc，</a> 其他用户就可以使用这个地址订阅你博客的RSS/ATOM了。<br><img src="https://blogimage-1300452281.cos.ap-shanghai.myqcloud.com/%E5%8D%9A%E5%AE%A2/RSS%E8%AE%A2%E9%98%85/RSS1.png" alt="RSS1"></p><p>配置完成后，就可以看到博客的feed了。<br><img src="https://blogimage-1300452281.cos.ap-shanghai.myqcloud.com/%E5%8D%9A%E5%AE%A2/RSS%E8%AE%A2%E9%98%85/RSS2.png" alt="RSS2"></p><p>最后在feed发布页签，开启邮件订阅功能，博客更新了，订阅的用户就会在第一时间收到最新内容。<br><img src="https://blogimage-1300452281.cos.ap-shanghai.myqcloud.com/%E5%8D%9A%E5%AE%A2/RSS%E8%AE%A2%E9%98%85/RSS3.png" alt="RSS3"></p><h4 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h4><p><a href="https://blog.zhangruipeng.me/hexo-theme-icarus/Widgets/icarus%E7%94%A8%E6%88%B7%E6%8C%87%E5%8D%97-%E6%8C%82%E4%BB%B6/#%E9%82%AE%E4%BB%B6%E8%AE%A2%E9%98%85">Icarus用户指南 - 挂件</a></p>]]></content>
     
