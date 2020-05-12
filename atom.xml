@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://beyondhxl.com/"/>
-  <updated>2020-05-12T01:15:25.676Z</updated>
+  <updated>2020-05-12T03:12:10.432Z</updated>
   <id>http://beyondhxl.com/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Goland常用快捷键</title>
+    <link href="http://beyondhxl.com/post/540fc464.html"/>
+    <id>http://beyondhxl.com/post/540fc464.html</id>
+    <published>2020-05-12T10:44:54.000Z</published>
+    <updated>2020-05-12T03:12:10.432Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>Goland常用快捷键记录，方便查询使用。</p></blockquote><a id="more"></a><h3 id="文件相关"><a href="#文件相关" class="headerlink" title="文件相关"></a>文件相关</h3><ul><li>CTRL+E，打开最近浏览过的文件</li><li>CTRL+SHIFT+E，打开最近更改的文件</li><li>CTRL+N，可以快速打开struct结构体</li><li>CTRL+SHIFT+N，可以快速打开文件</li></ul><h3 id="代码格式化"><a href="#代码格式化" class="headerlink" title="代码格式化"></a>代码格式化</h3><ul><li>CTRL+ALT+T，可以把代码包在一个块内，例如if{…}else{…}</li><li>CTRL+ALT+L，格式化代码</li><li>CTRL+空格，代码提示</li><li>CTRL+/，单行注释。CTRL+SHIFT+/，进行多行注释</li><li>CTRL+B，快速打开光标处的结构体或方法（跳转到定义处）</li><li>CTRL+“+/-”，可以将当前方法进行展开或折叠</li></ul><h3 id="查找和定位"><a href="#查找和定位" class="headerlink" title="查找和定位"></a>查找和定位</h3><ul><li>CTRL+R，替换文本</li><li>CTRL+F，查找文本</li><li>CTRL+SHIFT+F，进行全局查找</li><li>CTRL+G，快速定位到某行</li></ul><h3 id="代码编辑"><a href="#代码编辑" class="headerlink" title="代码编辑"></a>代码编辑</h3><ul><li>ALT+Q，可以看到当前方法的声明</li><li>CTRL+Backspace，按单词进行删除</li><li>SHIFT+ENTER，可以向下插入新行，即使光标在当前行的中间</li><li>Ctrl+Alt+Enter：当前行的上方插入空行</li><li>CTRL+X，删除当前光标所在行</li><li>CTRL+D，复制当前光标所在行</li><li>ALT+SHIFT+UP/DOWN，可以将光标所在行的代码上下移动</li><li>CTRL+SHIFT+U，可以将选中内容进行大小写转化</li></ul><h3 id="函数操作"><a href="#函数操作" class="headerlink" title="函数操作"></a>函数操作</h3><ul><li>CTRL+ALT+L，转到函数定义处</li><li>ALT+”&lt;-“，回退到上一次查看函数定义处</li></ul><p>参考文章:<br><a href="https://blog.csdn.net/benben_2015/article/details/78813670">Goland常用快捷键</a></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;Goland常用快捷键记录，方便查询使用。&lt;/p&gt;
+&lt;/blockquote&gt;
+    
+    </summary>
+    
+    
+      <category term="开发工具" scheme="http://beyondhxl.com/categories/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/"/>
+    
+      <category term="IDE" scheme="http://beyondhxl.com/categories/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/IDE/"/>
+    
+    
+      <category term="IDE" scheme="http://beyondhxl.com/tags/IDE/"/>
+    
+  </entry>
   
   <entry>
     <title>面向对象思想概念</title>
@@ -538,33 +565,6 @@ T     S     G&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;来源：力扣（LeetCode）&lt;
       
         &lt;h2 id=&quot;题意&quot;&gt;&lt;a href=&quot;#题意&quot; class=&quot;headerlink&quot; title=&quot;题意&quot;&gt;&lt;/a&gt;题意&lt;/h2&gt;&lt;p&gt;题目描述&lt;/p&gt;
 &lt;p&gt;输入一棵二叉搜索树，将该二叉搜索树转换成一个排序的双向链表。要求不能创建任何新的结点，只能调整树中结点指针的指向。&lt;
-      
-    
-    </summary>
-    
-    
-      <category term="数据结构与算法" scheme="http://beyondhxl.com/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/"/>
-    
-    
-      <category term="数据结构与算法" scheme="http://beyondhxl.com/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>复杂链表的复制</title>
-    <link href="http://beyondhxl.com/post/68dc24ea.html"/>
-    <id>http://beyondhxl.com/post/68dc24ea.html</id>
-    <published>2020-04-12T20:16:51.000Z</published>
-    <updated>2020-05-10T23:12:36.096Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="题意"><a href="#题意" class="headerlink" title="题意"></a>题意</h1><p>题目描述</p><p>请实现函数ComplexListNode Clone(ComplexListNode head)，复制一个复杂链表。在复杂链表中，每个结点除了有一个Next指针指向下一个结点外，还有一个Sibling指向链表中的任意结点或者NULL。</p><h1 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h1><p>借助辅助空间的O(n)解法</p><blockquote><ul><li>第一步复制原始链表上的每个结点N创建N’，然后把这些创建出来的结点用Next链接起来。同时把(N，N’)配对信息放到一个哈希表中，节点数量不多的话，用普通map也可以。</li></ul></blockquote><blockquote><ul><li>第二步还是设置复制链表上每个结点的sibling兄弟节点。由于有了哈希表，可以用O(1)的时间根据sibling找到sibling’。</li></ul></blockquote><h1 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a>代码实现</h1><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> main</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> (</span><br><span class="line"><span class="string">"fmt"</span></span><br><span class="line">)</span><br><span class="line"></span><br><span class="line"><span class="keyword">type</span> ComplexListNode <span class="keyword">struct</span> &#123;</span><br><span class="line">Val  <span class="keyword">int</span>                 <span class="comment">// 值</span></span><br><span class="line">Next *ComplexListNode    <span class="comment">// 下一个节点</span></span><br><span class="line">Sibling *ComplexListNode    <span class="comment">// 随机的兄弟节点</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">CloneComplexList</span><span class="params">(head *ComplexListNode)</span> *<span class="title">ComplexListNode</span></span> &#123;</span><br><span class="line"><span class="keyword">if</span> head == <span class="literal">nil</span> &#123;</span><br><span class="line"><span class="keyword">return</span> <span class="literal">nil</span></span><br><span class="line">&#125;</span><br><span class="line">m := <span class="built_in">make</span>(<span class="keyword">map</span>[*ComplexListNode]*ComplexListNode)</span><br><span class="line">cur := head</span><br><span class="line"><span class="keyword">for</span> cur != <span class="literal">nil</span> &#123;</span><br><span class="line"><span class="keyword">if</span> _, ok := m[cur]; !ok &#123;</span><br><span class="line">m[cur] = &amp;ComplexListNode&#123;cur.Val, <span class="literal">nil</span>, <span class="literal">nil</span>&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">if</span> cur.Next != <span class="literal">nil</span> &#123;</span><br><span class="line"><span class="keyword">if</span> _, ok := m[cur.Next]; !ok &#123;</span><br><span class="line">m[cur.Next] = &amp;ComplexListNode&#123;cur.Next.Val, <span class="literal">nil</span>, <span class="literal">nil</span>&#125;</span><br><span class="line">&#125;</span><br><span class="line">m[cur].Next = m[cur.Next]</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> cur.Sibling != <span class="literal">nil</span> &#123;</span><br><span class="line"><span class="keyword">if</span> _, ok := m[cur.Sibling]; !ok &#123;</span><br><span class="line">m[cur.Sibling] = &amp;ComplexListNode&#123;cur.Sibling.Val, <span class="literal">nil</span>, <span class="literal">nil</span>&#125;</span><br><span class="line">&#125;</span><br><span class="line">m[cur].Sibling = m[cur.Sibling]</span><br><span class="line">&#125;</span><br><span class="line">cur = cur.Next</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">return</span> m[head]</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">printList</span><span class="params">(head *ComplexListNode)</span></span>&#123;</span><br><span class="line"><span class="keyword">for</span> head != <span class="literal">nil</span>&#123;</span><br><span class="line">fmt.Printf(<span class="string">"当前节点: %d 兄弟节点: %d \t"</span>, head.Val, head.Sibling.Val)</span><br><span class="line">head = head.Next</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">main</span><span class="params">()</span></span> &#123;</span><br><span class="line"><span class="comment">// 构造链表</span></span><br><span class="line">l3 := &amp;ComplexListNode&#123;<span class="number">3</span>, <span class="literal">nil</span>, <span class="literal">nil</span>&#125;</span><br><span class="line">l2 := &amp;ComplexListNode&#123;<span class="number">2</span>, l3, <span class="literal">nil</span>&#125;</span><br><span class="line">l1 := &amp;ComplexListNode&#123;<span class="number">1</span>, l2, <span class="literal">nil</span>&#125;</span><br><span class="line">l1.Sibling = l3</span><br><span class="line">l2.Sibling = l2</span><br><span class="line">l3.Sibling = l1</span><br><span class="line">fmt.Println(<span class="string">"复制前 --------- "</span>)</span><br><span class="line">printList(l1)</span><br><span class="line">fmt.Println()</span><br><span class="line">fmt.Println(<span class="string">"复制后 --------- "</span>)</span><br><span class="line">printList(CloneComplexList(l1))</span><br><span class="line">fmt.Println(<span class="string">""</span>)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 测试输出如下：</span></span><br><span class="line">复制前 --------- </span><br><span class="line">当前节点: <span class="number">1</span> 兄弟节点: <span class="number">3</span> 当前节点: <span class="number">2</span> 兄弟节点: <span class="number">2</span> 当前节点: <span class="number">3</span> 兄弟节点: <span class="number">1</span> </span><br><span class="line">复制后 --------- </span><br><span class="line">当前节点: <span class="number">1</span> 兄弟节点: <span class="number">3</span> 当前节点: <span class="number">2</span> 兄弟节点: <span class="number">2</span> 当前节点: <span class="number">3</span> 兄弟节点: <span class="number">1</span> </span><br><span class="line"></span><br><span class="line">Process finished with exit code <span class="number">0</span></span><br></pre></td></tr></table></figure>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h1 id=&quot;题意&quot;&gt;&lt;a href=&quot;#题意&quot; class=&quot;headerlink&quot; title=&quot;题意&quot;&gt;&lt;/a&gt;题意&lt;/h1&gt;&lt;p&gt;题目描述&lt;/p&gt;
-&lt;p&gt;请实现函数ComplexListNode Clone(ComplexListNode head)，复制一个复杂链表。
       
     
     </summary>
