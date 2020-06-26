@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.beyondhxl.com/"/>
-  <updated>2020-06-26T15:09:19.030Z</updated>
+  <updated>2020-06-26T15:14:03.568Z</updated>
   <id>https://www.beyondhxl.com/</id>
   
   <author>
@@ -21,9 +21,9 @@
     <link href="https://www.beyondhxl.com/post/1c48c532.html"/>
     <id>https://www.beyondhxl.com/post/1c48c532.html</id>
     <published>2020-06-26T22:32:53.000Z</published>
-    <updated>2020-06-26T15:09:19.030Z</updated>
+    <updated>2020-06-26T15:14:03.568Z</updated>
     
-    <content type="html"><![CDATA[<blockquote><p>Golang游戏服务器知识点零散记录</p></blockquote><a id="more"></a><h3 id="使用Go语言开发大型MMORPG游戏服务器"><a href="#使用Go语言开发大型MMORPG游戏服务器" class="headerlink" title="使用Go语言开发大型MMORPG游戏服务器"></a>使用Go语言开发大型MMORPG游戏服务器</h3><p><strong>语言、库、第三方库</strong><br>1、Golang 语言特性和 C 语言很像。<br>2、Golang 用组合+接口，C++ 则更多是继承。<br>3、Golang 服务器如何保证解决游戏服务器存盘一致性问题？stop the world 是需要的, 但是 Golang 可以从语言层并发序列化玩家数据, 再通过后台存盘。<br>4、channel 和 goroutine 虽然是 Golang 的语言特性. 但是在编写服务器时, 其实只有底层用的比较多。<br>5、Golang 的第三方库很多。<br>6、Golang 用 interface{}/反射做泛型。</p><p><strong>运行期runtime</strong><br>1、Go1.6 版后的 GC 优化的已经很好了, 如果不是高性能、高并发Web应用, 只用 Golang 写游戏服务器, GC 损耗可以忽略不计。<br>2、崩溃捕捉是标配功能。<br>3、热更新：官方已经有 plugin 系统, plugin 跨平台。可以告别手动 cgo 做 so 热更新。</p><p><strong>开发、部署、调试、优化</strong><br>1、Jetbrains 的 Goland 是一把利器。<br>2、Golang 自带性能调优工具，从内存、CPU、阻塞点等几个方面直接出图进行分析，非常直观。<br>3、Golang 支持交叉编译、跨平台部署，在 windows 上编译输出一个 elf，到 Linux 服务器上直接开跑。</p><p>参考文章:<br><a href="">参考链接</a></p>]]></content>
+    <content type="html"><![CDATA[<blockquote><p>Golang游戏服务器知识点零散记录</p></blockquote><a id="more"></a><h3 id="使用Go语言开发大型MMORPG游戏服务器"><a href="#使用Go语言开发大型MMORPG游戏服务器" class="headerlink" title="使用Go语言开发大型MMORPG游戏服务器"></a>使用Go语言开发大型MMORPG游戏服务器</h3><p><strong>语言、库、第三方库</strong><br>1、Golang 语言特性和 C 语言很像。<br>2、Golang 用组合+接口，C++ 则更多是继承。<br>3、Golang 服务器如何保证解决游戏服务器存盘一致性问题？stop the world 是需要的，但是 Golang 可以从语言层并发序列化玩家数据，再通过后台存盘。<br>4、channel 和 goroutine 虽然是 Golang 的语言特性。但是在编写服务器时，其实只有底层用的比较多。<br>5、Golang 的第三方库很多。<br>6、Golang 用 interface{}/反射做泛型。</p><p><strong>运行期runtime</strong><br>1、Go1.6 版后的 GC 优化的已经很好了，如果不是高性能、高并发Web应用，只用 Golang 写游戏服务器，GC 损耗可以忽略不计。<br>2、崩溃捕捉是标配功能。<br>3、热更新：官方已经有 plugin 系统，plugin 跨平台。可以告别手动 cgo 做 so 热更新。</p><p><strong>开发、部署、调试、优化</strong><br>1、Jetbrains 的 Goland 是一把利器。<br>2、Golang 自带性能调优工具，从内存、CPU、阻塞点等几个方面直接出图进行分析，非常直观。<br>3、Golang 支持交叉编译、跨平台部署，在 windows 上编译输出一个 elf，到 Linux 服务器上直接开跑。</p><p>参考文章:<br><a href="">参考链接</a></p>]]></content>
     
     <summary type="html">
     
