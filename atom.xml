@@ -444,9 +444,9 @@
       <category term="IO多路复用" scheme="https://www.beyondhxl.com/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/IO%E5%A4%9A%E8%B7%AF%E5%A4%8D%E7%94%A8/"/>
     
     
-      <category term="epoll" scheme="https://www.beyondhxl.com/tags/epoll/"/>
-    
       <category term="计算机网络" scheme="https://www.beyondhxl.com/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/"/>
+    
+      <category term="epoll" scheme="https://www.beyondhxl.com/tags/epoll/"/>
     
       <category term="select" scheme="https://www.beyondhxl.com/tags/select/"/>
     
