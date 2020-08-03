@@ -534,9 +534,9 @@
       <category term="三次握手 四次挥手" scheme="https://www.beyondhxl.com/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/TCP/%E4%B8%89%E6%AC%A1%E6%8F%A1%E6%89%8B-%E5%9B%9B%E6%AC%A1%E6%8C%A5%E6%89%8B/"/>
     
     
-      <category term="TCP" scheme="https://www.beyondhxl.com/tags/TCP/"/>
-    
       <category term="计算机网络" scheme="https://www.beyondhxl.com/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/"/>
+    
+      <category term="TCP" scheme="https://www.beyondhxl.com/tags/TCP/"/>
     
       <category term="三次握手" scheme="https://www.beyondhxl.com/tags/%E4%B8%89%E6%AC%A1%E6%8F%A1%E6%89%8B/"/>
     
@@ -662,9 +662,9 @@
       <category term="TIME_WAIT" scheme="https://www.beyondhxl.com/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/TCP/TIME-WAIT/"/>
     
     
-      <category term="TCP" scheme="https://www.beyondhxl.com/tags/TCP/"/>
-    
       <category term="计算机网络" scheme="https://www.beyondhxl.com/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/"/>
+    
+      <category term="TCP" scheme="https://www.beyondhxl.com/tags/TCP/"/>
     
       <category term="TIME_WAIT" scheme="https://www.beyondhxl.com/tags/TIME-WAIT/"/>
     
